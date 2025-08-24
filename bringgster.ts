@@ -32,8 +32,8 @@ interface Bringgster {
 
 interface RpcRequest {
   type: string;
-  id?: string | number;
-  data?: Partial<Bringgster>;
+  id: string | number;
+  data: Bringgster;
 }
 
 interface ApiResponse {
