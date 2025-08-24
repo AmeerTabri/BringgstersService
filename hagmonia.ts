@@ -19,12 +19,13 @@ redisClient.on("error", (err: Error) => console.error("Redis error:", err));
   console.log("Connected to Redis");
 })();
 
-const mq = arnavmq({ host: "amqp://localhost" });
 
 const TTL = 5; // 5 seconds
 const ALL_KEY = "bringgsters:all";
 const ID_KEY = (id: number | string) => `bringgster:id:${id}`;
 const URL = "https://jsonplaceholder.typicode.com";
+
+const mq = arnavmq({ host: "amqp://localhost" });
 
 // create bringgsters table
 async function createTables() {
