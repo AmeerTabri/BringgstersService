@@ -8,3 +8,4 @@ echo "✅ bringgster.js started"
 node hagmonia.js &
 echo "✅ hagmonia.js started" 
 
+wait
