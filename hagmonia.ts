@@ -42,12 +42,25 @@ async function createTables() {
 
 createTables();
 
+//----------------------------- Types -----------------------------
+
+interface Post {
+  id: number;
+  title: string;
+  body: string;
+}
+
+interface Album {
+  id: number;
+  title: string;
+}
+
 //----------------------------- Helper functions -----------------------------
 
 // get all posts for a bringgster
-async function getPosts(id: number): Promise<Array<{ id: number; title: string; body: string }>> {
+async function getPosts(id: number): Promise<Post[]> {
   const response = await fetch(`${URL}/posts?userId=${id}`);
-  const posts = await response.json() as Array<{ id: number; title: string; body: string }>;
+  const posts = await response.json() as Post[];
   if (posts.length === 0) {
     return [];
   }
@@ -59,9 +72,9 @@ async function getPosts(id: number): Promise<Array<{ id: number; title: string; 
 }
 
 // get all albums for a bringgster
-async function getAlbums(id: number): Promise<Array<{ id: number; title: string }>> {
+async function getAlbums(id: number): Promise<Album[]> {
   const response = await fetch(`${URL}/albums?userId=${id}`);
-  const albums = await response.json() as Array<{ id: number; title: string }>;
+  const albums = await response.json() as Album[];
   if (albums.length === 0) {
     return [];
   }
