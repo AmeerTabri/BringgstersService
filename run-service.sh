@@ -6,8 +6,6 @@ node bringgster.js &
 echo "✅ bringgster.js started"
 
 node hagmonia.js &
-echo "✅ hagmonia.js started"
-
-echo "🎉 Both services are running!"
+echo "✅ hagmonia.js started" 
 
 wait

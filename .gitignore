@@ -32,3 +32,6 @@ jspm_packages/
 .storybook-out
 tmp/
 temp/
+test.ts
+install-docker.sh
+README.md
