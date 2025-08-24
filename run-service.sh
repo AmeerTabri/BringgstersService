@@ -1,14 +1,12 @@
 #!/bin/bash
 
-echo "Starting services..."
+npx tsc 
 
-# Start hagmonia worker
-node hagmonia.js &
-echo "✅ hagmonia.js started"
-
-# Start bringgster API
 node bringgster.js &
 echo "✅ bringgster.js started"
+
+node hagmonia.js &
+echo "✅ hagmonia.js started"
 
 echo "🎉 Both services are running!"
 
