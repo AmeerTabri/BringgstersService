@@ -26,8 +26,8 @@ interface Bringgster {
   first_name: string;
   last_name: string;
   role: string;
-  posts?: Post[];
-  albums?: Album[];
+  posts: Post[];
+  albums: Album[];
 } 
 
 interface RpcRequest {
